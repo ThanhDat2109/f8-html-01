@@ -45,10 +45,23 @@ a {
 }
 
 /* header */
-.header {
+.fixed-header {
+    background: #e6f0ff;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+.hero-wrap {
     background: #e6f0ff;
     height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* 2 dòng cuối dùng để loại bỏ margin collapse để phần vì hero có margin-top  */
+    /* phần   flex-direction: column; vì hiện tại chỉ có content là thẻ con của header
+     nên chúng ta sẽ không có thấy các phần tử nằm ngang ra thêm dòng này để sau này có
+      thêm phần tử cũng không bị đẩy các phẩn tử lên*/
 }
 .action {
     margin-left: auto;
@@ -56,7 +69,9 @@ a {
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
+    /* padding-top: 38px; */
+    padding: 12px 0;
+    /* background: orange; */
 }
 .navbar ul {
     display: flex;
